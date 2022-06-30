@@ -192,10 +192,10 @@
   .price {
     &__after-sale {
       display: none;
-      transition: all var(--trans-0-3);
+      
     }
     &__before-sale {
-      transition: all var(--trans-0-3);
+      
     }
   }
 }

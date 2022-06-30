@@ -6,6 +6,7 @@ function tabs(tabsSelector,tabsContentSelector,tabsParentSelector, activeClass) 
     console.log(tabs);
     console.log(tabsContent);
     console.log(tabsParent);
+    console.log(tabsSelector.slice(1));
   
     function hideTabContent() {
       tabsContent.forEach((item) => {
@@ -28,11 +29,12 @@ function tabs(tabsSelector,tabsContentSelector,tabsParentSelector, activeClass) 
     tabsParent.addEventListener("click", (e) => {
       console.log('aaa');
       const target = e.target;
-      console.log(e.target);
+      console.log(target.parentElement);
       
-      if (target && target.classList.contains(tabsSelector.slice(1))) {
+      if (target.classList.contains(tabsSelector.slice(1)) || target.parentElement.classList.contains(tabsSelector.slice(1)) || target.parentElement.parentElement.classList.contains(tabsSelector.slice(1)) ) {
         tabs.forEach((item, i) => {
-          if (target == item) {
+          console.log('bbb');
+          if (target == item || target.parentElement  == item || target.parentElement.parentElement  == item) {
             hideTabContent();
             showTabContent(i);
           }

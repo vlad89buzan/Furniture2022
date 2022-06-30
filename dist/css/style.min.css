@@ -2119,12 +2119,7 @@ button.swiper-pagination-bullet {
 }
 .categories .price__after-sale {
   display: none;
-  transition: all var(--trans-0-3);
 }
-.categories .price__before-sale {
-  transition: all var(--trans-0-3);
-}
-
 .fade {
   animation: fade 1.5s;
 }
