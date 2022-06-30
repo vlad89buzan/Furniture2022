@@ -1976,11 +1976,21 @@ button.swiper-pagination-bullet {
   }
 }
 
+.categories .tabcontainer {
+  margin-bottom: 5rem;
+}
 .categories .tabheader__items {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 87px;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 991.98px) {
+  .categories .tabheader__items {
+    margin-bottom: 87px;
+  }
 }
 .categories .tabheader__item {
   display: flex;
@@ -2001,6 +2011,16 @@ button.swiper-pagination-bullet {
 }
 .categories .tabheader__item--active .tabheader__img svg path {
   fill: var(--primary-color);
+}
+.categories .tabheader__img svg {
+  width: 60px;
+  height: 60px;
+}
+@media screen and (min-width: 991.98px) {
+  .categories .tabheader__img svg {
+    width: 100px;
+    height: 100px;
+  }
 }
 .categories .tabheader__img svg path {
   fill: var(--font-color1);
@@ -2025,14 +2045,29 @@ button.swiper-pagination-bullet {
 }
 .categories .tabcontent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
 }
 .categories .tabcontent.show {
   display: grid;
 }
 .categories .tabcontent.hide {
   display: none;
+}
+@media screen and (min-width: 767.98px) {
+  .categories .tabcontent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1439.98px) {
+  .categories .tabcontent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 767.98px) {
+  .categories .tabcontent {
+    gap: 3rem;
+  }
 }
 .categories .tabcontent__item {
   position: relative;
@@ -2066,8 +2101,13 @@ button.swiper-pagination-bullet {
 }
 .categories .tabcontent__item.sale .price__before-sale {
   color: var(--font-color2);
-  font-size: var(--normal-font);
+  font-size: var(--small-font);
   text-decoration: line-through;
+}
+@media screen and (min-width: 991.98px) {
+  .categories .tabcontent__item.sale .price__before-sale {
+    font-size: var(--normal-font);
+  }
 }
 .categories .tabcontent__promo {
   position: absolute;
@@ -2105,8 +2145,13 @@ button.swiper-pagination-bullet {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
-  font-size: var(--h4-font);
+  font-size: var(--normal-font);
   transition: all var(--trans-0-3);
+}
+@media screen and (min-width: 991.98px) {
+  .categories .tabcontent__descr {
+    font-size: var(--h4-font);
+  }
 }
 .categories .tabcontent__descr h5 {
   font-weight: var(--font-bold);
@@ -2120,6 +2165,13 @@ button.swiper-pagination-bullet {
 .categories .price__after-sale {
   display: none;
 }
+.categories__button.button {
+  text-transform: uppercase;
+  border-radius: 3px;
+  display: flex;
+  margin: 0 auto;
+}
+
 .fade {
   animation: fade 1.5s;
 }
