@@ -41,6 +41,8 @@ function tabs(
       target.parentElement.classList.contains(tabsSelector.slice(1)) ||
       target.parentElement.parentElement.classList.contains(
         tabsSelector.slice(1)
+      ) || target.parentElement.parentElement.parentElement.classList.contains(
+        tabsSelector.slice(1)
       )
     ) {
       tabs.forEach((item, i) => {
@@ -48,7 +50,8 @@ function tabs(
         if (
           target == item ||
           target.parentElement == item ||
-          target.parentElement.parentElement == item
+          target.parentElement.parentElement == item ||
+          target.parentElement.parentElement.parentElement == item
         ) {
           hideTabContent();
           showTabContent(i);
