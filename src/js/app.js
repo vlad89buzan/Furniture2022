@@ -1,5 +1,4 @@
 import * as flsFunctions from "./modules/functions.js";
-import "./modules/header.js";
 import header from "./modules/header.js";
 import {swiperHero} from "./modules/swiper-init.js";
 import {swiperAdvantages} from "./modules/swiper-init.js";

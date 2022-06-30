@@ -1,7 +1,7 @@
 .categories {
-    .tabcontainer{
-        margin-bottom: 5rem;
-    }
+  .tabcontainer {
+    margin-bottom: 5rem;
+  }
   .tabheader {
     &__items {
       display: flex;
@@ -9,11 +9,10 @@
       justify-content: space-around;
       gap: 2rem;
       flex-wrap: wrap;
-     margin-bottom: 40px;
-      @media screen and (min-width:$bp992) {
+      margin-bottom: 40px;
+      @media screen and (min-width: $bp992) {
         margin-bottom: 87px;
-     }
-      
+      }
     }
 
     &__item {
@@ -58,9 +57,9 @@
       svg {
         width: 60px;
         height: 60px;
-        @media screen and (min-width:$bp992) {
-           width: 100px;
-           height: 100px;
+        @media screen and (min-width: $bp992) {
+          width: 100px;
+          height: 100px;
         }
         path {
           fill: var(--font-color1);
@@ -97,16 +96,16 @@
     }
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    @media screen and (min-width:$bp768) {
-        grid-template-columns: repeat(2, 1fr);
+    @media screen and (min-width: $bp768) {
+      grid-template-columns: repeat(2, 1fr);
     }
-    @media screen and (min-width:$bp1440) {
-        grid-template-columns: repeat(3, 1fr);
+    @media screen and (min-width: $bp1440) {
+      grid-template-columns: repeat(3, 1fr);
     }
-   
+
     gap: 1.5rem;
-    @media screen and (min-width:$bp768) {
-        gap: 3rem;
+    @media screen and (min-width: $bp768) {
+      gap: 3rem;
     }
     &__item {
       position: relative;
@@ -149,23 +148,19 @@
           &__after-sale {
             display: block;
             color: var(--font-color3);
-           
-            
-            
           }
 
           &__before-sale {
             color: var(--font-color2);
             font-size: var(--small-font);
             text-decoration: line-through;
-            @media screen and (min-width:$bp992) {
-                font-size: var(--normal-font);
+            @media screen and (min-width: $bp992) {
+              font-size: var(--normal-font);
             }
           }
         }
       }
     }
-    
 
     &__promo {
       position: absolute;
@@ -208,9 +203,9 @@
       justify-content: space-between;
       text-transform: uppercase;
       font-size: var(--normal-font);
-      @media screen and (min-width:$bp992) {
+      @media screen and (min-width: $bp992) {
         font-size: var(--h4-font);
-    }
+      }
       transition: all var(--trans-0-3);
       h5 {
         font-weight: var(--font-bold);
@@ -227,20 +222,13 @@
   .price {
     &__after-sale {
       display: none;
-      
-    }
-    &__before-sale {
-      
     }
   }
-  &__button.button{
-    
+  &__button.button {
     text-transform: uppercase;
     border-radius: 3px;
-   display: flex;
-   margin: 0 auto;
-   
-    
+    display: flex;
+    margin: 0 auto;
   }
 }
 

@@ -965,6 +965,7 @@ img {
   }
 }
 .header__cart {
+  cursor: pointer;
   gap: 0.5rem;
 }
 .header__call {

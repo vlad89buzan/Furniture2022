@@ -8,11 +8,7 @@ function tabs(
   const tabs = document.querySelectorAll(tabsSelector);
   const tabsContent = document.querySelectorAll(tabsContentSelector);
   const tabsParent = document.querySelector(tabsParentSelector);
-  console.log(tabs);
-  console.log(tabsContent);
-  console.log(tabsParent);
-  console.log(tabsSelector.slice(1));
-
+  
   function hideTabContent() {
     tabsContent.forEach((item) => {
       item.classList.add("hide");
@@ -32,27 +28,17 @@ function tabs(
   showTabContent();
 
   tabsParent.addEventListener("click", (e) => {
-    console.log("aaa");
+   
     const target = e.target;
-    console.log(target.parentElement);
+    
 
     if (
       target.classList.contains(tabsSelector.slice(1)) ||
-      target.parentElement.classList.contains(tabsSelector.slice(1)) ||
-      target.parentElement.parentElement.classList.contains(
-        tabsSelector.slice(1)
-      ) || target.parentElement.parentElement.parentElement.classList.contains(
-        tabsSelector.slice(1)
-      )
+      target.closest(tabsSelector).classList.contains(tabsSelector.slice(1))
     ) {
       tabs.forEach((item, i) => {
-        console.log("bbb");
-        if (
-          target == item ||
-          target.parentElement == item ||
-          target.parentElement.parentElement == item ||
-          target.parentElement.parentElement.parentElement == item
-        ) {
+        
+        if (target == item || target.closest(tabsSelector) == item) {
           hideTabContent();
           showTabContent(i);
         }
