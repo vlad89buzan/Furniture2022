@@ -7,6 +7,9 @@
 @import 'blocks/hero';
 @import 'blocks/advantages';
 @import 'blocks/categories';
+@import 'blocks/about';
+@import 'blocks/asks';
+@import 'blocks/footer';
 
 
 :root {
@@ -206,16 +209,18 @@ section{
   }
 }
 .scrollUp {
-  width: 40px;
-  height: 40px;
-  background-color: var(--white-color);
-  color: var(--primary-color-hover);
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
   justify-content: center;
   cursor: pointer;
   position: fixed;z-index: var(--z-fixed);
-  bottom: 3rem;
-  right: 3rem;
-  border-radius: 4px;
+  bottom: 48rem;
+  left: 3.6rem;
+  border-radius: 50%;
   box-shadow: var(--box-shadow3);
   opacity: 0;
   visibility: hidden;
@@ -225,7 +230,7 @@ section{
     opacity: 1;
     visibility: visible;
     &:hover{
-      .scrollUp__icon{
+      svg{
         transform: translateY(-2px);
       }
     }

@@ -2185,6 +2185,243 @@ button.swiper-pagination-bullet {
     opacity: 1;
   }
 }
+@media screen and (min-width: 1279.98px) {
+  .about .container {
+    padding-right: 0;
+  }
+}
+.about .content {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.about .content__text {
+  background-color: var(--white-color);
+  border-right: 15px solid var(--primary-color);
+  padding: 50px 30px 50px 0;
+  gap: 1.5rem;
+  flex: 1 1 100%;
+}
+@media screen and (min-width: 1279.98px) {
+  .about .content__text {
+    max-width: 806px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+.about .content__description {
+  text-align: left;
+  line-height: 125%;
+}
+.about .content__description span {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+}
+.about .content__bg {
+  margin-left: auto;
+}
+
+.asks__input {
+  border: 1px solid var(--font-color1);
+  padding: 14px;
+  border-radius: 3px;
+}
+.asks__button.button {
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 991.98px) {
+  .asks .container {
+    padding-left: 0;
+  }
+}
+.asks .content {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.asks .content__text {
+  background-color: var(--white-color);
+  border-left: 15px solid var(--primary-color);
+  padding: 50px 0px 50px 30px;
+  gap: 1.5rem;
+  flex: 1 1 100%;
+}
+@media screen and (min-width: 991.98px) {
+  .asks .content__text {
+    max-width: 528px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
+.asks .content__title {
+  font-size: var(--h3-font);
+  line-height: 125%;
+}
+.asks .content__description {
+  text-align: left;
+  line-height: 125%;
+}
+.asks .content__description a {
+  font-weight: var(--font-bold);
+}
+.asks .content__bg {
+  margin-left: auto;
+}
+
+.footer {
+  background-color: var(--font-color1);
+  display: flex;
+}
+.footer__main {
+  flex-shrink: 1;
+}
+@media screen and (max-width: 991.98px) {
+  .footer__main {
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 991.98px) {
+  .footer__main {
+    flex-shrink: 0;
+  }
+}
+.footer__bg {
+  flex: 0 1 57%;
+  display: none;
+}
+@media screen and (min-width: 991.98px) {
+  .footer__bg {
+    display: block;
+  }
+}
+.footer__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__item.footer__itemFirst {
+  grid-area: footer__itemFirst;
+}
+.footer__item.footer__itemSecond {
+  grid-area: footer__itemSecond;
+  justify-self: auto;
+}
+.footer__item.footer__itemSecond .footer__link {
+  text-transform: uppercase;
+  padding-left: 20px;
+  position: relative;
+}
+.footer__item.footer__itemSecond .footer__link::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 3px;
+  background-color: var(--primary-color);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.footer__item.footer__itemThird {
+  grid-area: footer__itemThird;
+}
+.footer__item.footer__itemThird .footer__link {
+  text-transform: uppercase;
+  padding-left: 20px;
+  position: relative;
+}
+.footer__item.footer__itemThird .footer__link::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 3px;
+  background-color: var(--primary-color);
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.footer__item.footer__itemFourth {
+  grid-area: footer__itemFourth;
+}
+.footer__item.footer__itemFourth .footer__link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.footer__item.footer__itemFourth .footer__link.tel {
+  color: var(--primary-color);
+}
+.footer__item.footer__itemFourth .footer__link.tel.hideSvg svg {
+  visibility: hidden;
+}
+.footer__link {
+  color: var(--white-color);
+  transition: var(--trans-0-3);
+}
+.footer__link:hover {
+  color: var(--primary-color);
+}
+.footer__social-list {
+  flex-wrap: wrap;
+}
+.footer__social-item {
+  color: var(--white-color);
+}
+.footer__social-item:nth-child(1) {
+  flex-basis: 100%;
+}
+.footer__social-item svg path {
+  fill: var(--white-color);
+  transition: all var(--trans-0-3);
+}
+.footer__social-item .footer__link:hover svg path {
+  fill: var(--primary-color);
+}
+.footer .container.top {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-areas: "footer__itemFirst " "footer__itemSecond" "footer__itemThird" "footer__itemFourth";
+  column-gap: 3rem;
+  row-gap: 4rem;
+}
+@media screen and (min-width: 599.98px) {
+  .footer .container.top {
+    grid-template-areas: "footer__itemFirst . " "footer__itemSecond footer__itemThird" "footer__itemFourth .";
+  }
+}
+@media screen and (min-width: 767.98px) {
+  .footer .container.top {
+    grid-template-areas: "footer__itemFirst footer__itemFirst ." "footer__itemSecond footer__itemThird footer__itemFourth";
+    grid-template-columns: repeat(auto, 1fr);
+  }
+}
+.footer .container.top .content__description {
+  text-align: left;
+}
+.footer .container.bottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid var(--font-color2);
+}
+.footer .container.bottom .content__description {
+  color: var(--white-color);
+}
+.footer .logo__icon {
+  font-size: 4rem;
+  color: var(--font-color2);
+}
+.footer .logo__text {
+  font-size: 2rem;
+  color: var(--font-color2);
+  font-weight: var(--font-medium);
+}
+
 :root {
   --menu-breakpoint: 991.98px;
   /*Font Sizes & Family*/
@@ -2389,17 +2626,19 @@ section {
 }
 
 .scrollUp {
-  width: 40px;
-  height: 40px;
-  background-color: var(--white-color);
-  color: var(--primary-color-hover);
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
   justify-content: center;
   cursor: pointer;
   position: fixed;
   z-index: var(--z-fixed);
-  bottom: 3rem;
-  right: 3rem;
-  border-radius: 4px;
+  bottom: 48rem;
+  left: 3.6rem;
+  border-radius: 50%;
   box-shadow: var(--box-shadow3);
   opacity: 0;
   visibility: hidden;
@@ -2409,7 +2648,7 @@ section {
   opacity: 1;
   visibility: visible;
 }
-.scrollUp.scrollUp--active:hover .scrollUp__icon {
+.scrollUp.scrollUp--active:hover svg {
   transform: translateY(-2px);
 }
 .scrollUp__icon {

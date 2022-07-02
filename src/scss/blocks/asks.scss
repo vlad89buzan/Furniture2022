@@ -1,0 +1,54 @@
+.asks {
+    &__input{
+        border: 1px solid var(--font-color1);
+        padding: 14px;
+        border-radius: 3px;
+    }
+    &__button.button{
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+  .container {
+    @media screen and (min-width: $bp992){
+        padding-left: 0;
+    }
+    
+  }
+
+  .content {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+    &__text {
+      background-color: var(--white-color);
+      border-left: 15px solid var(--primary-color);
+      padding: 50px 0px 50px 30px;
+      gap: 1.5rem;
+      flex: 1 1 100%;
+      @media screen and (min-width: $bp992) {
+        max-width: 528px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+      }
+    }
+    &__title {
+      font-size: var(--h3-font);
+      line-height: 125%;
+    }
+    &__description {
+      text-align: left;
+      line-height: 125%;
+      a {
+       
+        font-weight: var(--font-bold);
+      }
+    }
+
+    &__bg {
+      margin-left: auto;
+    }
+  }
+}
